@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>PassGuard | Password Security Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">PG</div>
+      <div>
+        <h1>PassGuard</h1>
+        <p class="subtitle">Password Security Analyzer</p>
+      </div>
+    </header>
+
+    <section class="intro">
+      <span class="eyebrow">PERSONAL SECURITY TOOL</span>
+      <h2>Build a stronger password.</h2>
+      <p>Check password characteristics and get suggestions to improve them.</p>
+    </section>
+
+    <section class="panel">
+      <label for="password">Test password</label>
+      <div class="input-row">
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter a test password"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button id="togglePassword" class="toggle" type="button">Show</button>
+      </div>
+
+      <p class="privacy">🔒 Your input is analyzed locally in this browser.</p>
+
+      <div class="strength-heading">
+        <span>Estimated strength</span>
+        <strong id="strength">Not checked</strong>
+      </div>
+
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Estimated password strength"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progress"
+      >
+        <div id="strengthBar"></div>
+      </div>
+
+      <p id="summary" class="summary" aria-live="polite">
+        Enter a test password to begin.
+      </p>
+
+      <div class="details">
+        <div class="detail-card">
+          <span>Character count</span>
+          <strong id="length">0</strong>
+        </div>
+        <div class="detail-card">
+          <span>Checks passed</span>
+          <strong id="checks">0 / 6</strong>
+        </div>
+      </div>
+
+      <h3>Password checklist</h3>
+      <ul id="checklist" class="checklist">
+        <li>Enter a password to see the checklist.</li>
+      </ul>
+
+      <div class="suggestions">
+        <h3>How to improve</h3>
+        <ul id="suggestions">
+          <li>Use a long, unique password or passphrase.</li>
+        </ul>
+      </div>
+
+      <button id="clearPassword" class="clear" type="button">
+        Clear password
+      </button>
+    </section>
+
+    <footer>
+      <p>PassGuard is an educational tool. Its strength estimate is not a guarantee against cracking.</p>
+      <p>Never enter a real password into an unfamiliar website.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

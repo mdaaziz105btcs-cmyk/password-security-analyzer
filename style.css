@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #e8eef8;
+  background: #101827;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 32px 16px;
+  background:
+    radial-gradient(ellipse at top, #25365a 0%, #101827 55%);
+}
+
+.app {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 38px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #7c6cff;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 3px;
+  font-size: 23px;
+}
+
+.subtitle, .intro p, footer {
+  color: #a9b6cc;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 13px;
+}
+
+.intro {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #a99fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.intro h2 {
+  margin: 12px 0;
+  font-size: clamp(28px, 6vw, 38px);
+  line-height: 1.15;
+}
+
+.intro p {
+  line-height: 1.6;
+}
+
+.panel {
+  padding: 26px;
+  border: 1px solid #33415b;
+  border-radius: 20px;
+  background: #192437;
+  box-shadow: 0 20px 60px #0003;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #43516a;
+  border-radius: 10px;
+  outline: none;
+  background: #101827;
+  color: white;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #9b8cff;
+  box-shadow: 0 0 0 3px #7c6cff30;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid #c4baff;
+  outline-offset: 3px;
+}
+
+.toggle {
+  background: #34415a;
+  color: white;
+}
+
+.privacy {
+  margin: 12px 0 28px;
+  color: #a9b6cc;
+  font-size: 12px;
+}
+
+.strength-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+#strength {
+  color: #c3cbd9;
+}
+
+#strength.weak {
+  color: #ff8181;
+}
+
+#strength.medium {
+  color: #ffd166;
+}
+
+#strength.strong {
+  color: #65e6a3;
+}
+
+.progress {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #34415a;
+}
+
+#strengthBar {
+  width: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: #7d8798;
+  transition: width 0.25s ease;
+}
+
+#strengthBar.weak {
+  background: #ff6868;
+}
+
+#strengthBar.medium {
+  background: #ffd166;
+}
+
+#strengthBar.strong {
+  background: #45d995;
+}
+
+.summary {
+  margin: 12px 0 20px;
+  color: #b7c3d7;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0 26px;
+}
+
+.detail-card {
+  padding: 15px;
+  border: 1px solid #34415a;
+  border-radius: 12px;
+  background: #131d2d;
+}
+
+.detail-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #a9b6cc;
+  font-size: 12px;
+}
+
+.detail-card strong {
+  font-size: 22px;
+}
+
+h3 {
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.checklist, .suggestions ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checklist li, .suggestions li {
+  margin: 10px 0;
+  color: #c5cede;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.checklist li::before {
+  content: "○";
+  display: inline-block;
+  width: 24px;
+  color: #9ba8bd;
+  font-weight: 800;
+}
+
+.checklist li.pass::before {
+  content: "✓";
+  color: #65e6a3;
+}
+
+.suggestions {
+  margin-top: 25px;
+  padding: 17px;
+  border-radius: 12px;
+  background: #111b2b;
+}
+
+.suggestions li::before {
+  content: "→ ";
+  color: #a99fff;
+}
+
+.clear {
+  width: 100%;
+  margin-top: 20px;
+  background: #34415a;
+  color: white;
+}
+
+.clear:hover, .toggle:hover {
+  background: #455571;
+}
+
+footer {
+  padding: 20px 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 22px 12px;
+  }
+
+  .panel {
+    padding: 19px;
+  }
+
+  .input-row {
+    flex-wrap: wrap;
+  }
+
+  input {
+    width: 100%;
+    flex-basis: 70%;
+  }
+}
